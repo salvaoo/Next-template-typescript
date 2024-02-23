@@ -1,18 +1,20 @@
-import dynamic from 'next/dynamic'
-import { LucideProps } from 'lucide-react';
-import dynamicIconImports from 'lucide-react/dynamicIconImports';
-
-interface IconProps extends LucideProps {
-  name: keyof typeof dynamicIconImports;
-}
-
-const Icon = ({ name, ...props }: IconProps) => {
-  const LucideIcon = dynamic(dynamicIconImports[name])
-
-  return <LucideIcon {...props} />;
-};
+import {
+  Github,
+  Laptop,
+  Loader2,
+  LucideProps,
+  Moon,
+  SunMedium,
+  Twitter,
+} from "lucide-react"
 
 export const Icons = {
+  spinner: Loader2,
+  sun: SunMedium,
+  moon: Moon,
+  laptop: Laptop,
+  twitter: Twitter,
+  github: Github,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
@@ -22,5 +24,3 @@ export const Icons = {
     </svg>
   )
 }
-
-export default Icon;

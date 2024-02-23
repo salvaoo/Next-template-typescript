@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Icon from "@/components/icon"
+import {Icons} from "@/components/icon"
 
 export function SiteHeader() {
    return (
@@ -24,7 +24,7 @@ export function SiteHeader() {
                            variant: "ghost",
                         })}
                      >
-                        <Icon name="github" className="h-5 w-5" />
+                        <Icons.github className="h-5 w-5" />
                         <span className="sr-only">GitHub</span>
                      </div>
                   </Link>
@@ -39,7 +39,7 @@ export function SiteHeader() {
                            variant: "ghost",
                         })}
                      >
-                        <Icon name="twitter" className="h-5 w-5 fill-current" />
+                        <Icons.twitter className="h-5 w-5 fill-current" />
                         <span className="sr-only">Twitter</span>
                      </div>
                   </Link>
